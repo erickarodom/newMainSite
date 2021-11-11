@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="innerface" transform="matrix(0.974411,0,0,1.11342,-283.564,-417.217)">
+        <g transform="matrix(1.02831,-0.00696444,0.00370864,0.898139,-45.332,5.55116)">
+            <text x="536.364px" y="522.75px" style="font-family:'Quicksand-Light', 'Quicksand';font-weight:300;font-size:187.5px;fill:white;">o</text>
+        </g>
+        <g transform="matrix(1.0283,-0.00890694,0.00770844,0.898115,173.621,-138.602)">
+            <text x="279.271px" y="710.75px" style="font-family:'Quicksand-Light', 'Quicksand';font-weight:300;font-size:187.5px;fill:white;">r</text>
+        </g>
+        <g transform="matrix(1.02831,-0.00773428,0.0031746,0.898147,180.648,92.3383)">
+            <text x="193.153px" y="423.75px" style="font-family:'Quicksand-Light', 'Quicksand';font-weight:300;font-size:187.5px;fill:white;">e</text>
+        </g>
+        <g id="Layer1" transform="matrix(0.955128,0,0,0.957069,218.391,199.901)">
+            <g transform="matrix(1.07447,0,0,0.938425,-96.025,-121.432)">
+                <text x="215.417px" y="506.833px" style="font-family:'Quicksand-Light', 'Quicksand';font-weight:300;font-size:41.667px;fill:white;">e<tspan x="240.667px 258.083px 268.75px 292.375px 316.125px 343.167px 356.5px 369.75px 378.417px 391.75px 418.708px 445.75px 472.708px " y="506.833px 506.833px 506.833px 506.833px 506.833px 506.833px 506.833px 506.833px 506.833px 506.833px 506.833px 506.833px 506.833px ">ricka r. odom</tspan></text>
+            </g>
+            <g transform="matrix(1.07447,0,0,0.938425,-125.97,-88.3063)">
+                <text x="189px" y="516.17px" style="font-family:'Quicksand-Light', 'Quicksand';font-weight:300;font-size:41.667px;fill:white;">f<tspan x="205px 221.5px 248.458px 274.375px 289.417px 314.667px 340.583px 367.625px 380.958px 408px 433.042px 456.5px 481.75px 492.417px 519.375px 546.417px 571.667px " y="516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px 516.17px ">rontend developer</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>
