@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="../src/css/materialize/css/materialize.min.css"
+    />
 
     <!-- Mimic css -->
     <link rel="stylesheet" href="css/mimic.min.css" />
@@ -24,32 +28,72 @@
     <main class="body-container">
       <section class="left-side">
         <nav>
-          <div class="logo-ctnr">
-            <img
-              class="logo"
-              src="images/WHITE-LOGO400X250.svg"
-              alt="site
+          <img
+            class="logo-img"
+            src="images/WHITE-LOGO400X250.svg"
+            alt="site
             logo"
-            />
-          </div>
+          />
+
           <div class="siteName-ctnr">
             <h3 class="siteName">erickaodom.com</h3>
           </div>
         </nav>
+
         <div class="spacer"></div>
+
         <div class="main-text-content">
           <h1 id="frontend" class="ml9">
             <span class="text-wrapper">
               <span class="letters"> Frontend Developer </span>
             </span>
           </h1>
-          <p class="slogan">
-            Where the <span> ingenuity</span> of
-            <span>imagination</span> intersects <span>technology</span> and
-            <span>passion</span>.
-          </p>
-          <p>Let's solve problems and get creative together.</p>
-          <button class="lets-talk" type="button">let's talk</button>
+          <div class="slogan">
+            <p>
+              Where the <span class="ml12"> ingenuity</span> of
+              <span class="ml13">imagination</span> intersects
+              <span class="ml10"
+                ><span class="text-wrapper">
+                  <span class="letters">technology</span></span
+                > </span
+              >and <span class="ml2"> passion</span>. Let's solve problems and
+              get creative together.
+            </p>
+          </div>
+          <div class="acsent-line"></div>
+        </div>
+
+        <!-- The Tap Target (target of the tap) -->
+        <div class="fixed-action-btn" style="bottom: 45px; right: 25xp">
+          <a
+            id="menu"
+            class="waves-effect waves-light btn btn-floating"
+            onclick=" $('.tap-target').tapTarget('open');"
+          >
+            <i class="material-icons"></i
+          ></a>
+        </div>
+
+        <!-- Tap Target Content -->
+        <div class="tap-target" data-target="menu">
+          <div class="tap-target-content white-text">
+            <div class="right-align">
+              <h5 class="right-align">
+                Let's solve problems and get creative!
+              </h5>
+              <h5>Contact Me</h5>
+              <p>
+                email: ericka@erickaodom.com <br />
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/ericka-odom/ "
+                  target="_blank"
+                  >Ericka R. Odom</a
+                ><br />
+                GitHub: https://github.com/erickarodom
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Right side -->
@@ -64,10 +108,12 @@
         </div>
       </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!-- jQuery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="../src/js/materialize/js/materialize.min.js"></script>
 
     <!-- Materialize JS Inits & any custom JS -->
     <script type="text/javascript" src="index.js"></script>

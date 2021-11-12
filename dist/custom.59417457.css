@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 17px;
@@ -16,23 +27,23 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  background-color: transparent;
 }
-.logo-ctnr {
-  width: 5rem;
-}
-.logo {
-  width: 100%;
+
+.logo-img {
+  max-width: 6em;
+  display: inline-block;
 }
 
 .siteName {
   font-size: 1.5em;
   font-weight: 300;
   letter-spacing: 0.8px;
-  margin: 0;
 }
 
 .left-side {
-  height: 99vh;
+  height: 100vh;
   background-color: black;
   color: whitesmoke;
   padding: 5%;
@@ -58,11 +69,28 @@ nav {
 .main-text-content p {
   font-size: 1.35em;
   max-width: 600px;
-  line-height: 1.4;
 }
 
 .slogan span {
   color: rgb(14, 175, 167);
+}
+
+.acsent-line {
+  width: 100px;
+  border-top: 5px solid rgb(14, 175, 167);
+  margin-top: 25px;
+}
+
+.tap-target {
+  background-color: rgb(14, 175, 167);
+}
+.tap-target h5 {
+  line-height: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+.tap-target p {
+  font-size: 1.1rem;
 }
 
 .lets-talk {
@@ -104,7 +132,49 @@ nav {
 .ml9 .letter {
   transform-origin: 50% 100%;
   display: inline-block;
-  line-height: 1em;
+}
+.ml12 {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.ml12 .letter {
+  display: inline-block;
+}
+.ml13 {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.ml13 .letter {
+  display: inline-block;
+}
+
+.ml10 {
+  position: relative;
+  font-weight: 200;
+  bottom: -10px;
+  text-transform: uppercase;
+}
+
+.ml10 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ml10 .letter {
+  display: inline-block;
+  transform-origin: 0 0;
+}
+
+.ml2 {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.ml2 .letter {
+  display: inline-block;
 }
 
 
