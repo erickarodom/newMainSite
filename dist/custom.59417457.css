@@ -17,12 +17,14 @@ h6 {
 
 body {
   font-family: "Quicksand", sans-serif;
-  font-size: 17px;
+  font-size: 100%;
+  position: relative;
 }
 .body-container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .fakeNav-Container {
   display: flex;
@@ -38,7 +40,7 @@ body {
 }
 
 .siteName {
-  font-size: 1.5em;
+  font-size: 1.28em;
   font-weight: 300;
   letter-spacing: 0.8px;
 }
@@ -50,20 +52,30 @@ body {
   border-top-right-radius: 2%;
 }
 
+.sidenav-overlay {
+  background-color: rgba(0, 0, 0, 0.041);
+}
+
 .left-side {
   height: 100vh;
   background-color: black;
   color: whitesmoke;
-  padding: 5%;
+  padding: 25px 4% 0;
   position: relative;
 }
 
-.spacer {
-  height: 175px;
+.skillSlider {
+  margin-top: 3rem;
+  visibility: hidden;
+}
+@media (min-width: 600px) {
+  .skillSlider {
+    margin-top: 8rem;
+  }
 }
 
 .slide {
-  font-size: 4em;
+  font-size: 3.38em;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
@@ -75,25 +87,38 @@ body {
 }
 
 .main-text-content h1 {
-  font-size: 3.7em;
+  font-size: 3em;
   font-weight: 400;
-  max-width: 325px;
-  line-height: 1.1;
+  width: 220px;
+  line-height: 1;
+}
+@media (min-width: 600px) {
+  .main-text-content h1 {
+    width: 100%;
+  }
 }
 
 .main-text-content p {
   font-size: 1.35em;
-  max-width: 600px;
+  width: 315px;
+  letter-spacing: 0.5px;
 }
 
-.slogan span {
+@media (min-width: 600px) {
+  .main-text-content p {
+    width: 100%;
+  }
+}
+
+.slogan-kw {
   color: rgb(14, 175, 167);
+  text-transform: capitalize;
 }
 
 .acsent-line {
   width: 100px;
   border-top: 5px solid rgb(14, 175, 167);
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .fixed-action-btn,
@@ -118,11 +143,6 @@ body {
   font-weight: 900;
 }
 
-.right-side {
-  background-color: rgb(14, 175, 167);
-  height: 500px;
-}
-
 /* h1 animation code */
 .ml9 {
   position: relative;
@@ -143,49 +163,8 @@ body {
   transform-origin: 50% 100%;
   display: inline-block;
 }
-.ml12 {
-  font-weight: 200;
-  text-transform: uppercase;
-}
 
-.ml12 .letter {
-  display: inline-block;
-}
-.ml13 {
-  text-transform: uppercase;
-  font-weight: 200;
-}
-
-.ml13 .letter {
-  display: inline-block;
-}
-
-.ml10 {
-  position: relative;
-  font-weight: 200;
-  bottom: -10px;
-  text-transform: uppercase;
-}
-
-.ml10 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.ml10 .letter {
-  display: inline-block;
-  transform-origin: 0 0;
-}
-
-.ml2 {
-  font-weight: 200;
-  text-transform: uppercase;
-}
-
-.ml2 .letter {
-  display: inline-block;
-}
+/* MEDIA QUERIES */
 
 
 /*# sourceMappingURL=/custom.59417457.css.map */
