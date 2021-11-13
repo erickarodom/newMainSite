@@ -13,34 +13,82 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Slick Slider CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <!-- Materialize Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Materialize CSS -->
     <link
       rel="stylesheet"
       href="../src/css/materialize/css/materialize.min.css"
     />
-
     <!-- Mimic css -->
     <link rel="stylesheet" href="css/mimic.min.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="css/custom.css" />
   </head>
-  <!-- Content -->
+  <!-- Start of Site Content -->
   <body>
     <main class="body-container">
       <section class="left-side">
-        <nav>
+        <div class="fakeNav-Container">
+          <div class="siteName-ctnr">
+            <h3 class="siteName">erickaodom.com</h3>
+          </div>
+        </div>
+
+        <ul id="slide-out" class="sidenav">
+          <li>
+            <div class="user-view">
+              <span class="black-text name">Ericka R. Odom</span></a>              
+              <a href="#email">
+                <span class="black-text email">
+                  ericka@erickaodom.com
+                </span>
+                </a>             
+            </div>
+          </li>
+          <li><div class="divider black"></div></li>
+          <li>
+            <a class="waves-effect " href="#"><i class="material-icons ">face</i>About</a
+            >
+          </li>
+          <li>
+            <a class="waves-effect" href="#"><i class="material-icons ">important_devices</i>Projects</a
+            >
+          </li>
+          <li>
+            <a class="waves-effect" href="#"><i class="material-icons ">laptop_mac</i>Blog (Soon)</a
+            >
+          </li>
+        </ul>
+        <!-- Side Nav Menu Trigger & Logo -->
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
           <img
             class="logo-img"
             src="images/WHITE-LOGO400X250.svg"
             alt="site
-            logo"
-          />
-
-          <div class="siteName-ctnr">
-            <h3 class="siteName">erickaodom.com</h3>
-          </div>
-        </nav>
+          logo"
+        /></a>
 
         <div class="spacer"></div>
+
+        <div class="slider-ctnr">
+          <div class="skillSlider">
+            <div class="slide">WordPress</div>
+            <div class="slide">HTML/CSS</div>
+            <div class="slide">javascript</div>
+            <div class="slide">jQuery</div>
+          </div>
+        </div>
 
         <div class="main-text-content">
           <h1 id="frontend" class="ml9">
@@ -63,15 +111,15 @@
           <div class="acsent-line"></div>
         </div>
 
-        <!-- The Tap Target (target of the tap) -->
+        <!-- The Tap Target (target content trigger) -->
         <div class="fixed-action-btn" style="bottom: 45px; right: 25xp">
           <a
             id="menu"
-            class="waves-effect waves-light btn btn-floating"
+            class="btn btn-floating btn-medium teal waves-effect waves-light"
             onclick=" $('.tap-target').tapTarget('open');"
           >
-            <i class="material-icons"></i
-          ></a>
+            <i class="material-icons">menu</i></a
+          >
         </div>
 
         <!-- Tap Target Content -->
@@ -90,7 +138,10 @@
                   target="_blank"
                   >Ericka R. Odom</a
                 ><br />
-                GitHub: https://github.com/erickarodom
+                GitHub:
+                <a href="https://github.com/erickarodom/" target="_blank">
+                  https://github.com/erickarodom
+                </a>
               </p>
             </div>
           </div>
@@ -108,14 +159,28 @@
         </div>
       </section>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- Anime.js cdn -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"
+    ></script>
     <!-- jQuery cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <!-- Slick Slider cdn -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- Materialize JS File -->
+    <script
+      type="text/javascript"
+      src="../src/js/materialize/js/materialize.min.js"
+    ></script>
 
-    <script src="../src/js/materialize/js/materialize.min.js"></script>
-
-    <!-- Materialize JS Inits & any custom JS -->
+    <!-- custom JS -->
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

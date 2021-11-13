@@ -24,9 +24,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-nav {
+.fakeNav-Container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
   background-color: transparent;
 }
@@ -34,12 +34,20 @@ nav {
 .logo-img {
   max-width: 6em;
   display: inline-block;
+  margin-top: -5px;
 }
 
 .siteName {
   font-size: 1.5em;
   font-weight: 300;
   letter-spacing: 0.8px;
+}
+
+.sidenav {
+  width: 225px;
+  height: 400px;
+  background-color: rgb(15, 175, 167);
+  border-top-right-radius: 2%;
 }
 
 .left-side {
@@ -51,7 +59,14 @@ nav {
 }
 
 .spacer {
-  height: 200px;
+  height: 175px;
+}
+
+.slide {
+  font-size: 4em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
 }
 
 .main-text-content {
@@ -81,6 +96,11 @@ nav {
   margin-top: 25px;
 }
 
+.fixed-action-btn,
+.tap-target {
+  position: absolute;
+}
+
 .tap-target {
   background-color: rgb(14, 175, 167);
 }
@@ -93,19 +113,9 @@ nav {
   font-size: 1.1rem;
 }
 
-.lets-talk {
-  margin-top: 1.5rem;
-  padding: 5px 40px;
-  border-radius: 25px;
-  background-color: rgb(14, 175, 167);
-  color: white;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-}
-
-.lets-talk:hover {
-  cursor: pointer;
+.tap-target a {
+  color: rgb(4, 116, 104);
+  font-weight: 900;
 }
 
 .right-side {

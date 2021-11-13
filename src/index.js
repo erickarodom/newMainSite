@@ -5,9 +5,38 @@
 const $ = jQuery;
 
 $(function($){
+  $('.skillSlider').slick(
+    {
+      arrows: false,
+      dots: false,
+      infinite: true,
+      speed: 1500,
+      fade: true,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 2000
+      
+    }
+  );
+  $('.sidenav').sidenav();
   $('.tap-target').tapTarget();
-  
 });
+
+
+
+// (function($){
+//   $(function(){
+//     $('.sidenav').sidenav();
+//     $('.carousel').carousel(
+//       {indicators: true,
+//       numVisible: 3});
+//     $('.tooltipped').tooltip()
+//     $('.tap-target').tapTarget();
+
+//   }); 
+//   // end of document ready
+// })
+// (jQuery); // end of jQuery name space
 
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml9 .letters');
@@ -17,7 +46,7 @@ anime.timeline({loop: false})
   .add({
     targets: '.ml9 .letter',
     scale: [0, 1],
-    duration: 4000,
+    duration: 5500,
     elasticity: 600,
     delay: (el, i) => 45 * (i+1)
   });

@@ -122,8 +122,31 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // -------------------------------------------------
 var $ = jQuery;
 $(function ($) {
+  $('.skillSlider').slick({
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 1500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+  $('.sidenav').sidenav();
   $('.tap-target').tapTarget();
-}); // Wrap every letter in a span
+}); // (function($){
+//   $(function(){
+//     $('.sidenav').sidenav();
+//     $('.carousel').carousel(
+//       {indicators: true,
+//       numVisible: 3});
+//     $('.tooltipped').tooltip()
+//     $('.tap-target').tapTarget();
+//   }); 
+//   // end of document ready
+// })
+// (jQuery); // end of jQuery name space
+// Wrap every letter in a span
 
 var textWrapper = document.querySelector('.ml9 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -132,7 +155,7 @@ anime.timeline({
 }).add({
   targets: '.ml9 .letter',
   scale: [0, 1],
-  duration: 4000,
+  duration: 5500,
   elasticity: 600,
   delay: function delay(el, i) {
     return 45 * (i + 1);
@@ -248,7 +271,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56000" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64853" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
