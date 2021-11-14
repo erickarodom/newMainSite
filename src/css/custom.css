@@ -21,7 +21,7 @@ body {
   position: relative;
 }
 .body-container {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -65,31 +65,38 @@ body {
 }
 
 .skillSlider {
-  margin-top: 3rem;
   visibility: hidden;
+  margin-top: 10%;
 }
-@media (min-width: 600px) {
+
+@media screen and (min-height: 570px) {
   .skillSlider {
-    margin-top: 8rem;
+    margin-top: 20vh;
   }
 }
 
 .slide {
-  font-size: 3.38em;
+  font-size: 3.2em;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
 }
 
+@media screen and (min-height: 570px) {
+  .slide {
+    font-size: 4em;
+  }
+}
+
 .main-text-content {
   position: absolute;
-  bottom: 5rem;
+  bottom: 4rem;
 }
 
 .main-text-content h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 400;
-  width: 220px;
+  width: 180px;
   line-height: 1;
 }
 @media (min-width: 600px) {
@@ -106,7 +113,7 @@ body {
 
 @media (min-width: 600px) {
   .main-text-content p {
-    width: 100%;
+    width: 50vw;
   }
 }
 
