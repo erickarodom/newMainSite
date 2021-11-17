@@ -134,9 +134,13 @@ $(function ($) {
   });
   setTimeout(function () {
     $('.skillSlider').css("visibility", "visible");
-  }, 3500);
+  }, 2000);
   $('.sidenav').sidenav();
+  $('.modal').modal();
   $('.tap-target').tapTarget();
+  $('.collapsible').collapsible({
+    accordian: true
+  });
 }); // Wrap every letter in a span
 
 var textWrapper = document.querySelector('.ml9 .letters');
@@ -180,7 +184,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59937" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57108" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
