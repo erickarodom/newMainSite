@@ -1,7 +1,7 @@
+// Materialize.css instances-----------------------
 
-  // M.AutoInit();
+  // M.AutoInit(); materialize auto initialize - can not use parameters
 
-// -------------------------------------------------
 const $ = jQuery;
 
 $(function($){
@@ -20,27 +20,31 @@ $(function($){
   );
   setTimeout(function(){
     $('.skillSlider').css("visibility", "visible");
-  }, 2000);
+  }, 1500);
 
   $('.sidenav').sidenav();
   $('.modal').modal();
   $('.tap-target').tapTarget();
   $('.collapsible').collapsible(
-    {accordian: true}
+    
   );
 });
 
+// Moving Letters/Anime.JS instances--------------------
 
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml9 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// var textWrapper = document.querySelector('.ml9 .letters');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: false})
-  .add({
-    targets: '.ml9 .letter',
-    scale: [0, 1],
-    duration: 5500,
-    elasticity: 600,
-    delay: (el, i) => 45 * (i+1)
-  });
+// anime.timeline({loop: false})
+//   .add({
+//     targets: '.ml9 .letter',
+//     scale: [0, 1],
+//     duration: 5500,
+//     elasticity: 600,
+//     delay: (el, i) => 45 * (i+1)
+//   });
 
+
+  
+// import Swup from "swup";

@@ -11,15 +11,10 @@ body {
 }
 
 .site-pad {
-  padding: 25px 4% 0;
+  padding: 25px 4% 0 !important;
   position: relative;
 }
-.body-container {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+
 h1,
 h2,
 h3,
@@ -27,12 +22,12 @@ h4,
 h6 {
   font-family: "Raleway", sans-serif;
 }
-.fakeNav-Container {
+.myNavBar {
   position: sticky;
   left: 0;
   top: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-start;
   background-color: transparent;
   color: white;
@@ -40,15 +35,18 @@ h6 {
 
 .sidenav a.active-nav-link {
   color: rgb(93, 202, 179) !important;
+  text-decoration: underline 3px rgb(93, 202, 179);
 }
 
 .logo-img,
-.project-page .logo-img {
+.home-page .logo-img,
+.project-page .logo-img,
+.about-page .logo-img {
   max-width: 6em;
   display: inline-block;
   position: fixed;
   top: 25px;
-
+  left: 4%;
   z-index: 201;
 }
 
@@ -76,10 +74,11 @@ li a.slideOut-link {
   font-weight: 900;
 }
 
-.left-side {
+.hp-bg-ctnr {
   height: 100vh;
   background-color: black;
   color: whitesmoke;
+  overflow: hidden;
 }
 
 .skillSlider {
@@ -108,9 +107,9 @@ li a.slideOut-link {
   }
 }
 
-.main-text-content {
+.home-page .main-text-content {
   position: absolute;
-  bottom: 4rem;
+  bottom: 5rem;
 }
 
 .main-text-content h1 {
@@ -197,7 +196,9 @@ li a.slideOut-link {
   position: relative;
 }
 
-.project-page .fakeNav-Container {
+.home-page .myNavBar,
+.project-page .myNavBar,
+.about-page .myNavBar {
   width: 100vw;
   height: 100px;
   position: fixed;
@@ -205,19 +206,20 @@ li a.slideOut-link {
   top: 0;
   display: flex;
   z-index: 200;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: space-between;
   background-color: black;
 }
 
-.project-page .project-page-header .siteName {
+.home-page .siteName-ctnr .siteName,
+.project-page .siteName-ctnr .siteName,
+.about-page .siteName-ctnr .siteName {
   padding: 25px 50px 0 0;
 }
 .projects-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .projects-container h3 {
@@ -231,7 +233,6 @@ li a.slideOut-link {
 
 .projects {
   margin: 0 0 10rem 0;
-
   padding: 2rem 4rem;
   background-color: white;
   border-radius: 0.5em;
@@ -250,6 +251,9 @@ li a.slideOut-link {
 
 ul.project-details {
   width: 500px;
+}
+.wp-projects {
+  margin-top: 7rem;
 }
 
 .collapsible {
@@ -288,6 +292,8 @@ ul.project-details {
   margin-top: 10px;
 }
 
+.home-page .fixed-action-btn,
+.home-page.tap-target,
 .project-page .fixed-action-btn,
 .project-page.tap-target,
 .about-page .fixed-action-btn,
@@ -296,6 +302,8 @@ ul.project-details {
   right: 20px;
   bottom: 20px;
 }
+
+.home-page-footer,
 .project-page-footer,
 .about-page-footer {
   width: 100vw;
