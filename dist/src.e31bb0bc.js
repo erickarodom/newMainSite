@@ -118,12 +118,31 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-// M.AutoInit();
-// -------------------------------------------------
+// Materialize.css instances-----------------------
+// M.AutoInit(); materialize auto initialize - can not use parameters
 var $ = jQuery;
 $(function ($) {
+  $('.skillSlider').slick({
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 1500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+  setTimeout(function () {
+    $('.skillSlider').css("visibility", "visible");
+  }, 1500);
+  $('.sidenav').sidenav();
+  $('.modal').modal();
   $('.tap-target').tapTarget();
-}); // Wrap every letter in a span
+  $('.collapsible').collapsible({
+    accordian: true
+  });
+}); // Moving Letters/Anime.JS instances--------------------
+// Wrap every letter in a span
 
 var textWrapper = document.querySelector('.ml9 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -132,94 +151,13 @@ anime.timeline({
 }).add({
   targets: '.ml9 .letter',
   scale: [0, 1],
-  duration: 4000,
+  duration: 5500,
   elasticity: 600,
   delay: function delay(el, i) {
     return 45 * (i + 1);
   }
-}); // Wrap every letter in a span
-
-var textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-anime.timeline({
-  loop: false
-}).add({
-  targets: '.ml12 .letter',
-  translateX: [40, 0],
-  translateZ: 0,
-  opacity: [0, 1],
-  easing: "easeOutExpo",
-  duration: 1600,
-  delay: function delay(el, i) {
-    return 970 + 30 * i;
-  }
-}); // .add({
-//   targets: '.ml12 .letter',
-//   translateX: [0,-30],
-//   opacity: [1,0],
-//   easing: "easeInExpo",
-//   duration: 1100,
-//   delay: (el, i) => 300 + 30 * i
-// });
-// Wrap every letter in a span
-
-var textWrapper = document.querySelector('.ml13');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-anime.timeline({
-  loop: false
-}).add({
-  targets: '.ml13 .letter',
-  translateY: [100, 0],
-  translateZ: 0,
-  opacity: [0, 1],
-  easing: "easeOutExpo",
-  duration: 1600,
-  delay: function delay(el, i) {
-    return 1270 + 30 * i;
-  }
-}); // .add({
-//   targets: '.ml13 .letter',
-//   translateY: [0,-100],
-//   opacity: [1,0],
-//   easing: "easeInExpo",
-//   duration: 1200,
-//   delay: (el, i) => 500 + 30 * i
-// });
-// // Wrap every letter in a span
-// var textWrapper = document.querySelector('.ml10 .letters');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-// anime.timeline({loop: true})
-//   .add({
-//     targets: '.ml10 .letter',
-//     rotateY: [-90, 0],
-//     duration: 1300,
-//     delay: (el, i) => 50 * i
-//   }).add({
-//     targets: '.ml10',
-//     opacity: 0,
-//     duration: 1000,
-//     easing: "easeOutExpo",
-//     delay: 1000
-//   });
-//   // Wrap every letter in a span
-// var textWrapper = document.querySelector('.ml2');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-// anime.timeline({loop: true})
-//   .add({
-//     targets: '.ml2 .letter',
-//     scale: [4,1],
-//     opacity: [0,1],
-//     translateZ: 0,
-//     easing: "easeOutExpo",
-//     duration: 1300,
-//     delay: (el, i) => 250*i
-//   }).add({
-//     targets: '.ml2',
-//     opacity: 0,
-//     duration: 1000,
-//     easing: "easeOutExpo",
-//     delay: 1000
-//   });
+});
+var swup = new Swup();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -248,7 +186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56000" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64811" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -4,81 +4,153 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 100%;
+  position: relative;
+}
+
+.site-pad {
+  padding: 25px 4% 0 !important;
+  position: relative;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
-  margin: 0;
-  padding: 0;
-  line-height: 0;
+  font-family: "Raleway", sans-serif;
 }
-
-body {
-  font-family: "Quicksand", sans-serif;
-  font-size: 17px;
-}
-.body-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-nav {
+.myNavBar {
+  position: sticky;
+  left: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   background-color: transparent;
+  color: white;
 }
 
-.logo-img {
+.sidenav a.active-nav-link {
+  color: rgb(93, 202, 179) !important;
+  text-decoration: underline 3px rgb(93, 202, 179);
+}
+
+.logo-img,
+.home-page .logo-img,
+.project-page .logo-img,
+.about-page .logo-img {
   max-width: 6em;
   display: inline-block;
+  position: fixed;
+  top: 25px;
+  left: 4%;
+  z-index: 201;
 }
 
 .siteName {
-  font-size: 1.5em;
+  font-size: 1.28em;
   font-weight: 300;
   letter-spacing: 0.8px;
+  margin: 0;
 }
 
-.left-side {
+.sidenav {
+  width: 225px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.904);
+  border-top-right-radius: 2%;
+}
+
+.sidenav-overlay {
+  background-color: rgba(0, 0, 0, 0.041);
+}
+
+.user-view span,
+li a.slideOut-link {
+  color: rgb(4, 116, 104);
+  font-weight: 900;
+}
+
+.hp-bg-ctnr {
   height: 100vh;
   background-color: black;
   color: whitesmoke;
-  padding: 5%;
-  position: relative;
+  overflow: hidden;
 }
 
-.spacer {
-  height: 200px;
+.skillSlider {
+  visibility: hidden;
+  margin-top: 10%;
 }
 
-.main-text-content {
+@media screen and (min-height: 570px) {
+  .skillSlider {
+    margin-top: 20vh;
+  }
+}
+
+.slide {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+}
+
+@media screen and (min-height: 570px) {
+  .slide {
+    font-size: 4em;
+  }
+}
+
+.home-page .main-text-content {
   position: absolute;
   bottom: 5rem;
 }
 
 .main-text-content h1 {
-  font-size: 3.7em;
+  font-size: 2.5em;
   font-weight: 400;
-  max-width: 325px;
-  line-height: 1.1;
+  width: 180px;
+  line-height: 1;
+}
+@media (min-width: 600px) {
+  .main-text-content h1 {
+    width: 100%;
+    font-size: 3.5em;
+  }
 }
 
 .main-text-content p {
   font-size: 1.35em;
-  max-width: 600px;
+  width: 315px;
+  letter-spacing: 0.5px;
 }
 
-.slogan span {
+@media (min-width: 600px) {
+  .main-text-content p {
+    width: 50vw;
+  }
+}
+
+.slogan-kw {
   color: rgb(14, 175, 167);
+  text-transform: capitalize;
 }
 
 .acsent-line {
   width: 100px;
   border-top: 5px solid rgb(14, 175, 167);
-  margin-top: 25px;
+  margin-top: 20px;
+}
+
+.fixed-action-btn,
+.tap-target {
+  position: absolute;
 }
 
 .tap-target {
@@ -88,32 +160,16 @@ nav {
   line-height: 1em;
   margin-top: 0.5em;
   margin-bottom: 0.3em;
+  text-transform: none;
 }
 .tap-target p {
   font-size: 1.1rem;
 }
-
-.lets-talk {
-  margin-top: 1.5rem;
-  padding: 5px 40px;
-  border-radius: 25px;
-  background-color: rgb(14, 175, 167);
-  color: white;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.8px;
+.tap-target a {
+  color: rgb(4, 116, 104);
 }
 
-.lets-talk:hover {
-  cursor: pointer;
-}
-
-.right-side {
-  background-color: rgb(14, 175, 167);
-  height: 500px;
-}
-
-/* h1 animation code */
+/*homepage h1 animation code */
 .ml9 {
   position: relative;
   font-weight: 200;
@@ -133,46 +189,133 @@ nav {
   transform-origin: 50% 100%;
   display: inline-block;
 }
-.ml12 {
-  font-weight: 200;
-  text-transform: uppercase;
-}
 
-.ml12 .letter {
-  display: inline-block;
-}
-.ml13 {
-  text-transform: uppercase;
-  font-weight: 200;
-}
+/* Project Page Styles */
 
-.ml13 .letter {
-  display: inline-block;
-}
-
-.ml10 {
+.project-page {
   position: relative;
-  font-weight: 200;
-  bottom: -10px;
+}
+
+.home-page .myNavBar,
+.project-page .myNavBar,
+.about-page .myNavBar {
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 200;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.home-page .siteName-ctnr .siteName,
+.project-page .siteName-ctnr .siteName,
+.about-page .siteName-ctnr .siteName {
+  padding: 25px 50px 0 0;
+}
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.projects-container h3 {
+  margin-bottom: 0;
+  color: rgb(0, 150, 136);
+  font-weight: 700;
+  padding: 5px 0;
+  width: fit-content;
   text-transform: uppercase;
 }
 
-.ml10 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+.projects {
+  margin: 0 0 10rem 0;
+  padding: 2rem 4rem;
+  background-color: white;
+  border-radius: 0.5em;
+}
+.project-content {
+  display: flex;
+  margin-top: 2rem;
 }
 
-.ml10 .letter {
-  display: inline-block;
-  transform-origin: 0 0;
+.project-thumbnail {
+  margin: 0 30px 0 50px;
+}
+.project-thumbnail img {
+  border-radius: 0.5em;
 }
 
-.ml2 {
-  font-weight: 200;
+ul.project-details {
+  width: 500px;
+}
+.wp-projects {
+  margin-top: 7rem;
+}
+
+.collapsible {
+  border: none;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.collapsible-header h6 {
+  font-weight: 700;
+  color: rgb(0, 150, 136);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.ml2 .letter {
-  display: inline-block;
+.project-detail-icon {
+  color: rgb(0, 150, 136);
+  margin-top: 8px;
 }
+.collapsible-body {
+  background-color: rgb(0, 150, 136);
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+.collapsible-body a {
+  color: black;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.home-page .fixed-action-btn,
+.home-page.tap-target,
+.project-page .fixed-action-btn,
+.project-page.tap-target,
+.about-page .fixed-action-btn,
+.about-page.tap-target {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.home-page-footer,
+.project-page-footer,
+.about-page-footer {
+  width: 100vw;
+  height: 75px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  color: rgb(0, 150, 136);
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: rgb(0, 0, 0);
+}
+
+/* About Page Styles */
