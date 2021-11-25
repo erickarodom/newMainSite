@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/erickarodom/newMainSite#readme",
   "dependencies": {
-    "parcel": "^2.0.1",
-    "swup": "^2.0.14"
+    "@barba/core": "^2.9.7",
+    "parcel": "^2.0.1"
   }
 }

@@ -22,8 +22,8 @@ h4,
 h6 {
   font-family: "Raleway", sans-serif;
 }
-.myNavBar {
-  position: sticky;
+/* .myNavBar {
+  position: absolute;
   left: 0;
   top: 0;
   display: flex;
@@ -31,11 +31,27 @@ h6 {
   align-items: flex-start;
   background-color: transparent;
   color: white;
+} */
+
+.home-page .myNavBar,
+.project-page .myNavBar,
+.about-page .myNavBar {
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 200;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
 }
 
-.sidenav a.active-nav-link {
-  color: rgb(93, 202, 179) !important;
-  text-decoration: underline 3px rgb(93, 202, 179);
+.home-page .siteName-ctnr .siteName,
+.project-page .siteName-ctnr .siteName,
+.about-page .siteName-ctnr .siteName {
+  padding: 25px 50px 0 0;
 }
 
 .logo-img,
@@ -64,6 +80,11 @@ h6 {
   border-top-right-radius: 2%;
 }
 
+.sidenav a.active-nav-link {
+  color: rgb(93, 202, 179) !important;
+  text-decoration: underline 3px rgb(93, 202, 179);
+}
+
 .sidenav-overlay {
   background-color: rgba(0, 0, 0, 0.041);
 }
@@ -82,8 +103,8 @@ li a.slideOut-link {
 }
 
 .skillSlider {
+  margin-top: 40%;
   visibility: hidden;
-  margin-top: 10%;
 }
 
 @media screen and (min-height: 570px) {
@@ -94,34 +115,43 @@ li a.slideOut-link {
 
 .slide {
   font-family: "Raleway", sans-serif;
-  font-size: 3.2em;
-  font-weight: 500;
+  font-size: 3.3em;
+  font-weight: 600;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
+  letter-spacing: 8px;
 }
 
-@media screen and (min-height: 570px) {
+@media screen and (min-width: 541px) {
   .slide {
-    font-size: 4em;
+    font-size: 5.8em;
   }
 }
 
 .home-page .main-text-content {
   position: absolute;
-  bottom: 5rem;
+  bottom: 3rem;
+}
+
+@media screen and (min-width: 541px) {
+  .home-page .main-text-content {
+    bottom: 7rem;
+  }
 }
 
 .main-text-content h1 {
-  font-size: 2.5em;
-  font-weight: 400;
+  font-size: 2.4em;
+  font-weight: 500;
   width: 180px;
   line-height: 1;
+  margin-bottom: 0;
+  letter-spacing: 1.5px;
 }
 @media (min-width: 600px) {
   .main-text-content h1 {
     width: 100%;
-    font-size: 3.5em;
+    font-size: 4.5em;
   }
 }
 
@@ -134,6 +164,7 @@ li a.slideOut-link {
 @media (min-width: 600px) {
   .main-text-content p {
     width: 50vw;
+    font-size: 1.8em;
   }
 }
 
@@ -169,52 +200,12 @@ li a.slideOut-link {
   color: rgb(4, 116, 104);
 }
 
-/*homepage h1 animation code */
-.ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 4em;
-}
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-}
-
 /* Project Page Styles */
 
 .project-page {
   position: relative;
 }
 
-.home-page .myNavBar,
-.project-page .myNavBar,
-.about-page .myNavBar {
-  width: 100vw;
-  height: 100px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: flex;
-  z-index: 200;
-  justify-content: space-between;
-  background-color: black;
-}
-
-.home-page .siteName-ctnr .siteName,
-.project-page .siteName-ctnr .siteName,
-.about-page .siteName-ctnr .siteName {
-  padding: 25px 50px 0 0;
-}
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -239,19 +230,46 @@ li a.slideOut-link {
 }
 .project-content {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 2rem;
 }
 
-.project-thumbnail {
-  margin: 0 30px 0 50px;
+@media screen and (min-width: 769px) {
+  .project-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
+
+.project-thumbnail {
+  margin: 0 30px 15px 0;
+}
+
+@media screen and (min-width: 769px) {
+  .project-thumbnail {
+    margin: 0 30px 0 50px;
+  }
+}
+
 .project-thumbnail img {
   border-radius: 0.5em;
+  max-width: 180px;
 }
 
 ul.project-details {
-  width: 500px;
+  max-width: 500px;
+  min-width: 180px;
 }
+
+@media screen and (min-width: 769px) {
+  ul.project-details {
+    width: 500px;
+  }
+}
+
 .wp-projects {
   margin-top: 7rem;
 }
@@ -318,6 +336,54 @@ ul.project-details {
   background-color: rgb(0, 0, 0);
 }
 
+@media screen and (max-width: 540px) {
+  .home-page-footer {
+    background-color: transparent;
+  }
+}
+
 /* About Page Styles */
+
+/* Animations CSS */
+
+/*homepage h1 animation code */
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+}
+
+/* barba & gsap page transition css */
+
+/* .loader {
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+}
+
+.page-transition {
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to right, teal 50%, black 50%);
+  width: 100%;
+  height: 0;
+} */
 
 /*# sourceMappingURL=index.4eb0d2f4.css.map */
